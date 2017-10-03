@@ -16,7 +16,7 @@
                                 <change_image
                                         :close_modal="toggleModalProxy"
                                         :set_ratio="set_ratio"
-                                        :update_image="updateImageOroxy"
+                                        :update_image="updateImageProxy"
                                         :call_back_image_url="call_back_image_url">
                                 </change_image>
                             </slot>
@@ -58,7 +58,7 @@
             updateImage(val){
                 this.imgUrl = val;
             },
-            updateImageOroxy(val){
+            updateImageProxy(val){
                 this.updateImage(val)
             },
             toggleModal() {
