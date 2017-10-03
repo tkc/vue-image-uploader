@@ -53,7 +53,6 @@
             getLeft(el) {
                 let left = el.offsetLeft;
                 let parent = el.offsetParent;
-
                 while (parent) {
                     left += parent.offsetLeft;
                     parent = parent.offsetParent;
@@ -63,7 +62,6 @@
             getTop(el) {
                 let top = el.offsetTop;
                 let parent = el.offsetParent;
-
                 while (parent) {
                     top += parent.offsetTop;
                     parent = parent.offsetParent;
