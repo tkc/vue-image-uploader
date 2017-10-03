@@ -21,6 +21,9 @@
                                 </change_image>
                             </slot>
                         </div>
+                        <div class="modal-footer">
+                            <button @click="toggleModal">cancel</button>
+                        </div>
                     </div>
                 </div>
             </div>
