@@ -1,4 +1,5 @@
 import {Setting} from './Config'
+
 const boxW = Setting.Container.w, boxH = Setting.Container.h;
 
 export const AdjustImageSize = (w, h) => {

@@ -26,7 +26,7 @@
 
 <script>
 
-    import generateHash from 'random-hash'
+    import shortid from 'shortid'
     import SelectBox from './SelectBox.vue'
     import {Setting} from './Config'
     import {SaveDataUrl} from './S3';
@@ -110,13 +110,11 @@
             this.$input = document.getElementById(this.idFileInput);
             this.$srcImg = document.getElementById(this.idClipSrcImg);
             this.$imgContainer = document.getElementById(this.idImgContainer);
-            this.$containerBox = this.$el.querySelectorAll('.container')[0];
             this.imageChange();
         },
         methods: {
             hashId() {
-                const hash = generateHash();
-                return hash.replace(/[A-Z]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) | 32));
+                return shortid.generate().replace(/[A-Z]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) | 32));
             },
             imageChange() {
                 this.$input.click();
@@ -176,7 +174,7 @@
                 this.normalMode = !this.normalMode;
                 this.close_modal();
             },
-            setData(fileURL){
+            setData(fileURL) {
                 this.hiddenImgUrl = fileURL;
                 if ('undefined' != typeof this.update_image) {
                     this.update_image(fileURL);
@@ -187,6 +185,7 @@
             },
             save() {
                 let rec = this.$refs.box.rec;
+
                 if (!rec.w || !rec.h) {
                     return
                 }
@@ -195,6 +194,7 @@
                 const bufferCanvas = document.createElement('canvas');
                 const bfx = bufferCanvas.getContext('2d');
                 const computedRec = this.getComputedRec(rec);
+
                 bufferCanvas.width = rec.w;
                 bufferCanvas.height = rec.h;
                 bfx.drawImage(this.$srcImg, computedRec.l, computedRec.t, computedRec.w, computedRec.h);
@@ -210,7 +210,6 @@
                     this.setData(dataImage);
                     this.normalMode = !this.normalMode;
                 }
-
                 this.close_modal();
             }
         }
