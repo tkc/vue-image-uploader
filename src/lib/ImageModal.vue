@@ -22,7 +22,7 @@
                             </slot>
                         </div>
                         <div class="modal-footer">
-                            <button @click="toggleModal">cancel</button>
+                            <span class="button" @click="toggleModal">cancel</span>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
         },
         data() {
             return {
-                imgUrl: '',
+                imgUrl:  uploadIcon(),
                 showModal: false,
                 uploadIcon: uploadIcon(),
             }
@@ -58,10 +58,10 @@
             this.imgUrl = this.exist_image && this.exist_image.length > 1 && this.exist_image.indexOf('http') != -1 ? this.exist_image : defaultImage();
         },
         methods: {
-            updateImage(val){
+            updateImage(val) {
                 this.imgUrl = val;
             },
-            updateImageProxy(val){
+            updateImageProxy(val) {
                 this.updateImage(val)
             },
             toggleModal() {

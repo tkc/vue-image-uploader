@@ -5,7 +5,8 @@
             <image_modal
                     input_name="image_tag"
                     :exist_image="existImage"
-                    set_ratio="2.2"/>
+                    set_ratio="2.2">
+            </image_modal>
         </div>
         <p>click image</p>
     </div>
@@ -13,6 +14,7 @@
 
 <script>
     import ImageModal from "./lib/ImageModal.vue"
+
     export default {
         name: 'app',
         data() {
