@@ -1,9 +1,10 @@
 {
-  "name": "vue-image-uploader",
-  "version": "1.0.0",
-  "description": "image uploader",
-  "author": "tkc",
-  "private": true,
+  "name": "vue-image-crop-uploader",
+  "version": "1.0.1",
+  "description": "vue image uploader",
+  "author": "info@onga.jp",
+  "main": "./src/lib/ImageModal.vue",
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.124.0",
+    "random-hash": "^4.0.1",
     "shortid": "^2.2.8",
     "vue": "^2.4.2"
   },
