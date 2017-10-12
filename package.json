@@ -5,6 +5,24 @@
   "author": "info@onga.jp",
   "main": "./src/lib/ImageModal.vue",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkc/vue-image-uploader.git"
+  },
+  "bugs": {
+    "url": "ttps://github.com/tkc/vue-image-uploader/issues"
+  },
+  "keywords": [
+    "vue",
+    "image",
+    "picture",
+    "photo",
+    "uploader",
+    "crop",
+    "cropper",
+    "file",
+    "avatar"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
