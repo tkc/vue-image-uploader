@@ -15,7 +15,7 @@ https://tkc.github.io/vue-image-uploader/
 ## Usage
 ```
 <image_modal
-         input_name="image_tag"
+         input_name="form_image_name"
          :exist_image="existImage"
          set_ratio="2.2">
 </image_modal>
