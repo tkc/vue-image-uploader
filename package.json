@@ -1,6 +1,6 @@
 {
   "name": "vue-image-crop-uploader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "vue image uploader",
   "author": "info@onga.jp",
   "main": "./src/lib/ImageModal.vue",
